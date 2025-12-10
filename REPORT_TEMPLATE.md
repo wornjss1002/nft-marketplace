@@ -43,7 +43,6 @@ MarketToken이라는 ERC-20 토큰을 발행하고, 누구나 홈페이지를 �
 #### 특징
 -  자동 지급: 신청 즉시 토큰 수령
 -  중복 방지: 같은 주소는 한 번만 신청 가능
--  관리자 기능: 소유자가 토큰 충전/회수 가능
 
 ---
 
@@ -110,9 +109,9 @@ NFTMarketplace 컨트랙트를 통해 사용자들이 NFT를 판매 등록하고
 ```
 
 #### 특징
-- ✅ 토큰 결제: MarketToken만을 거래 수단으로 사용
-- ✅ 수수료 시스템: 0.5%의 마켓플레이스 수수료
-- ✅ 재진입 공격 방지: ReentrancyGuard 적용
+-  토큰 결제: MarketToken만을 거래 수단으로 사용
+-  수수료 시스템: 0.5%의 마켓플레이스 수수료
+-  재진입 공격 방지: ReentrancyGuard 적용
 
 ---
 
@@ -163,18 +162,16 @@ URL: /marketplace
 ## 3. 배포 정보
 
 ### 3.1 배포 네트워크
-**네트워크**: [배포한 네트워크 이름]
-**Faucet**: [네트워크의 Faucet URL]
+**네트워크**: sepolia
 
 ### 3.2 배포된 컨트랙트 주소
 
-| 컨트랙트 | 주소 | 블록 탐색기 |
-|---------|------|-----------|
-| MarketToken (ERC-20) | `0x...` | [링크] |
-| MarketNFT (ERC-721) | `0x...` | [링크] |
-| NFTMarketplace | `0x...` | [링크] |
+| 컨트랙트 | 주소 | 
+|---------|------|
+| MarketToken (ERC-20) | `0x46c99Fc9164657AE1aE68FB8F362DeDB52D5e6a1` |
+| MarketNFT (ERC-721) | `0xd9f81DB27b1A7208037841C49924CEf7274F1bfE` |
+| NFTMarketplace | `0xFc188093c0FaCa4Ccb771bEd59C20c0890510D51` | 
 
-**배포 날짜**: [날짜]
 
 ### 3.3 배포 절차
 
@@ -193,9 +190,6 @@ URL: /marketplace
 
 4. **NFTMarketplace 배포**
    - 파일 생성: `contracts/NFTMarketplace.sol`
-   - 생성자 매개변수:
-     - `_paymentToken`: TOKEN_ADDRESS
-     - `_feeRecipient`: [본인 지갑 주소]
    - 컴파일 및 배포
    - 주소 기록: `MARKETPLACE_ADDRESS`
 
@@ -212,18 +206,11 @@ URL: /marketplace
 - 테스트 네트워크 설정
 - 테스트 ETH 확보 (Faucet에서)
 
-### 4.2 애플리케이션 실행
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### 4.3 기본 사용 시나리오
+### 4.2 기본 사용 시나리오
 
 **Step 1: 지갑 연결**
 ```
-1. http://localhost:3000 접속
+1. dApp 접속
 2. 우측 상단 "지갑 연결" 버튼 클릭
 3. MetaMask 팝업에서 계정 선택 및 승인
 ```
@@ -389,47 +376,10 @@ MetaMask 서명
 ## 7. 보안 고려사항
 
 ### 7.1 구현된 보안 기능
-- ✅ ReentrancyGuard: 재진입 공격 방지
-- ✅ Ownable: 관리자 권한 관리
-- ✅ 매핑 기반 관리: 중복 신청 방지
-- ✅ 권한 체크: 소유자만 특정 함수 호출 가능
-
-### 7.2 주의사항
-- 이 프로젝트는 교육 목적입니다
-- 프로덕션 배포 전에 보안 감사(audit)를 권장합니다
-- Private key를 절대 공개하지 마세요
-- 테스트넷에서만 테스트하세요
-
----
-
-## 8. 추가 기능 (선택사항)
-
-프로젝트를 확장할 수 있는 기능들:
-
-### 8.1 입찰 시스템
-```solidity
-- NFT에 대한 입찰 기능
-- 입찰가 비교 및 자동 낙찰
-- 시간 제한
-```
-
-### 8.2 로열티 시스템
-```solidity
-- 원작자에게 재판매 로열티 지급
-- 로열티율 설정
-```
-
-### 8.3 컬렉션 기능
-```
-- 여러 NFT를 하나의 컬렉션으로 관리
-- 컬렉션 기반 필터링
-```
-
-### 8.4 평점 시스템
-```
-- 판매자/구매자 평점
-- 신뢰도 표시
-```
+-  ReentrancyGuard: 재진입 공격 방지
+-  Ownable: 관리자 권한 관리
+-  매핑 기반 관리: 중복 신청 방지
+-  권한 체크: 소유자만 특정 함수 호출 가능
 
 ---
 
@@ -448,14 +398,13 @@ MetaMask 서명
 
 ## 10. 참고 자료
 
-- GitHub 리포지토리: [주소]
+- GitHub 리포지토리:[ [주소]](https://github.com/wornjss1002/nft-marketplace)
 - Remix IDE: https://remix.ethereum.org/
 - ethers.js 문서: https://docs.ethers.org/
-- OpenZeppelin 문서: https://docs.openzeppelin.com/
 - Solidity 문서: https://docs.soliditylang.org/
 
 ---
 
-**작성일**: [날짜]
-**작성자**: [이름]
+**작성일**: 2025.12.10
+
 
