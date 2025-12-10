@@ -37,7 +37,7 @@ contract MarketToken is ERC20, Ownable {
         );
 
         hasReceivedAirdrop[msg.sender] = true;
-        transfer(msg.sender, AIRDROP_AMOUNT);
+        _transfer(address(this), msg.sender, AIRDROP_AMOUNT);
 
         emit AirdropRequested(msg.sender, AIRDROP_AMOUNT);
     }
