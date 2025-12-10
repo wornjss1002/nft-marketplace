@@ -1,18 +1,19 @@
-# NFT Marketplace 과제 보고서 템플릿
+# NFT Marketplace 과제 보고서
 
+## github 주소 : https://github.com/wornjss1002/nft-marketplace
+## 배포 주소 : https://nft-marketplace-wrc4.vercel.app
 ## 1. 프로젝트 개요
 
 ### 1.1 프로젝트 목표
-- ERC-20 토큰 기반의 NFT 마켓플레이스 개발
-- 토큰 에어드롭, NFT 민팅, NFT 거래 기능 구현
+- ERC-20, ERC-721 NFT 마켓플레이스 개발
+- 토큰 에어드롭, NFT 민팅, NFT 거래 기능 및 내 NFT 확인 기능 구현
 
 ### 1.2 사용 기술
 - **Smart Contracts**: Solidity ^0.8.0
 - **Frontend**: Next.js + TypeScript + ethers.js v6
 - **표준**: ERC-20 (토큰), ERC-721 (NFT)
-- **라이브러리**: OpenZeppelin Contracts
 - **IDE**: Remix IDE (배포)
-- **네트워크**: [사용한 테스트넷 이름]
+- **네트워크**: sepolia
 
 ---
 
@@ -40,9 +41,9 @@ MarketToken이라는 ERC-20 토큰을 발행하고, 누구나 홈페이지를 �
 ```
 
 #### 특징
-- ✅ 자동 지급: 신청 즉시 토큰 수령
-- ✅ 중복 방지: 같은 주소는 한 번만 신청 가능
-- ✅ 관리자 기능: 소유자가 토큰 충전/회수 가능
+-  자동 지급: 신청 즉시 토큰 수령
+-  중복 방지: 같은 주소는 한 번만 신청 가능
+-  관리자 기능: 소유자가 토큰 충전/회수 가능
 
 ---
 
@@ -457,3 +458,4 @@ MetaMask 서명
 
 **작성일**: [날짜]
 **작성자**: [이름]
+
